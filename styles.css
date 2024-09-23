@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+    --gray: #cccccc;
+    --green: #89ff76;
+    --dark-gray: #aaaaaa;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;    
+}
+
+body{
+    background-color: var(--dark-gray);
+    font-family: "VT323", monospace;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.title{
+    font-size: 4rem;
+    text-align: center;
+}
+
+p{
+    font-size: 2rem;
+}
+
+.status, .total{
+    font-size: 2.5rem;
+}
+
+#price-container, #change-due{
+    background-color: black;
+    color: var(--green);
+    padding: 2.5rem;
+    border: 10px solid var(--gray);
+    border-radius: 25px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#price-container{
+    width: 60%;
+    margin-bottom: 0 !important;
+}
+
+#cid-container{
+    background-color: var(--gray);
+    padding: 2rem;
+    border-radius: 15px;
+   
+}
+
+.inline{
+    display: inline;
+}
+
+.indent{
+    text-indent: 15px;
+}
+
+input, button{
+    font-family: inherit;
+    height: 2.5rem;
+    font-size: 1.8rem;
+}
+    
+
+.line{
+    width: 40%;
+    height: 3rem;
+    background-color: var(--gray);
+    position: relative;
+    right: -10%;     
+}
+
+input{
+    text-indent: 4px;
+   
+}
+
+button{
+    width: 8rem;
+    border-radius: 3px;
+}
+
+button:hover{
+    background-color: var(--dark-gray);
+    cursor: pointer;
+}
+
+
+
+
+
+
