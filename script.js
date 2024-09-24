@@ -100,8 +100,10 @@ const update = () => {
     if (Math.round(changeDenominatorCountsArray.reduce((acc, el) => acc + el[1], 0) * 100) / 100 < change) {  //this is when the actual change amount denominations are less than expected change (there aren't enough coins/bills of the right denominations to make exact change, even if the total amount in the drawer is sufficient.)
       changeContainer.innerHTML = `<p class="status">Status: INSUFFICIENT_FUNDS</p>`;
     } else {
-      changeContainer.innerHTML = `<p class="status">Status: OPEN</p>${changeDenominatorCountsArray.map(([name, amount]) => 
-        `<p class="indent">${name}: $${amount.toFixed(2)}</p>`).join('')}`;
+      changeContainer.innerHTML = `<p class="status">Status: OPEN</p>`;
+      changeDenominatorCountsArray.forEach(([elName, amount]) => {
+        changeContainer.innerHTML += `<p>${elName}: $${amount.toFixed(2)}</p>`;
+      });
       updateCidDisplay();
     }
   }
